@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-10",
+  "items": [
+    {
+      "id": "pilot-magazine-2026-04",
+      "title": "格致青年｜2026年4月號",
+      "category": "格致青年",
+      "issue": "2026-04",
+      "description": "原本公開的校刊四版範例（V13.4 靜態檔案測試）",
+      "mode": "pdf",
+      "status": "published",
+      "pageCount": 4,
+      "coverUrl": "assets/page1.jpg",
+      "pages": [
+        "assets/page1.jpg",
+        "assets/page2.jpg",
+        "assets/page3.jpg",
+        "assets/page4.jpg"
+      ]
+    },
+    {
+      "id": "pilot-30-pages",
+      "title": "30頁翻頁測試刊物",
+      "category": "研習手冊",
+      "issue": "2026-10",
+      "description": "無機密內容的30頁範例，確認多頁圖片不經 GAS 也能翻頁",
+      "mode": "pdf",
+      "status": "published",
+      "pageCount": 30,
+      "coverUrl": "assets/demo30/page-01.jpg",
+      "pages": [
+        "assets/demo30/page-01.jpg",
+        "assets/demo30/page-02.jpg",
+        "assets/demo30/page-03.jpg",
+        "assets/demo30/page-04.jpg",
+        "assets/demo30/page-05.jpg",
+        "assets/demo30/page-06.jpg",
+        "assets/demo30/page-07.jpg",
+        "assets/demo30/page-08.jpg",
+        "assets/demo30/page-09.jpg",
+        "assets/demo30/page-10.jpg",
+        "assets/demo30/page-11.jpg",
+        "assets/demo30/page-12.jpg",
+        "assets/demo30/page-13.jpg",
+        "assets/demo30/page-14.jpg",
+        "assets/demo30/page-15.jpg",
+        "assets/demo30/page-16.jpg",
+        "assets/demo30/page-17.jpg",
+        "assets/demo30/page-18.jpg",
+        "assets/demo30/page-19.jpg",
+        "assets/demo30/page-20.jpg",
+        "assets/demo30/page-21.jpg",
+        "assets/demo30/page-22.jpg",
+        "assets/demo30/page-23.jpg",
+        "assets/demo30/page-24.jpg",
+        "assets/demo30/page-25.jpg",
+        "assets/demo30/page-26.jpg",
+        "assets/demo30/page-27.jpg",
+        "assets/demo30/page-28.jpg",
+        "assets/demo30/page-29.jpg",
+        "assets/demo30/page-30.jpg"
+      ]
+    },
+    {
+      "id": "pilot-31-pages",
+      "title": "31頁 PDF 文件閱讀測試",
+      "category": "研習手冊",
+      "issue": "2026-10",
+      "description": "無機密內容的31頁範例，直接閱讀靜態 PDF 原檔",
+      "mode": "document",
+      "status": "published",
+      "pageCount": 31,
+      "coverUrl": "assets/demo31-cover.jpg",
+      "url": "assets/demo-31-pages.pdf"
+    },
+    {
+      "id": "pilot-external-link",
+      "title": "圖書館館訊｜外部連結測試",
+      "category": "圖書館館訊",
+      "issue": "2026-10",
+      "description": "測試外部網址模式，暫以學校首頁作為示範連結",
+      "mode": "link",
+      "status": "published",
+      "coverUrl": "",
+      "url": "https://www.gjsh.ntpc.edu.tw/home"
+    }
+  ]
+}

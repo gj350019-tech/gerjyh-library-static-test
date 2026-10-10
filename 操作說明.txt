@@ -1,0 +1,60 @@
+格致數位閱讀館 V13.4｜GitHub 靜態資料與圖片獨立測試版
+======================================================
+
+【目標】
+不用登入 Google，也不呼叫 Google Apps Script，直接從 GitHub Pages 讀取
+publications.json 與同網域的 JPG / PDF。
+
+【重要：這是獨立測試站，不是正式 V13.3 升級檔】
+請「新建一個公開的 GitHub 儲存庫」進行測試，例如 gerjyh-library-static-test。
+切勿覆蓋目前正式閱讀館的 index.html、API 或 GAS。
+
+【如何上線】
+1. 解壓縮 ZIP。確保根目錄能看到 index.html、publications.json、assets 資料夾。
+2. 新建 GitHub Public 儲存庫，命名例如 gerjyh-library-static-test。
+3. 將解壓縮後的「檔案內容」上傳到儲存庫最外層（不是直接上傳 ZIP）。
+4. Settings → Pages → Source: Deploy from a branch → main → /(root) → Save。
+5. 等網站部署，網址形式：https://帳號.github.io/gerjyh-library-static-test/
+6. 使用同一支手機 Chrome 一般模式（非無痕）開啟，看到「靜態資料載入成功 · 4 本」。
+7. 再分別點四版翻頁書、30頁翻頁書、31頁文件閱讀、圖書館外部連結。
+8. 打開 publications.json 網址，確認手機 Chrome 一般模式直接顯示 JSON。
+
+【不使用 GAS 的證據】
+- index.html 裡不包含 script.google.com 或 JSONP。
+- publications.json 為本儲存庫內的純 JSON。
+- 翻頁 JPG、文件 PDF 均在同一儲存庫的 assets/。
+- StPageFlip 程式本身沿用原版的 jsDelivr CDN；此 CDN 與 Google 登入無關。
+
+【已知限制】
+- 本測試版只有範例資料，沒有同步你 Google Sheets 的其他正式刊物。
+- 這一版「發布／下架」需手動修改 JSON 與檔案，還沒有自動同步。
+- GitHub 公開檔案與舊 Git 歷史不可視為私密，下架不等於撤回已被下載的內容。
+- 手機瀏覽器可能選擇下載 PDF 而非內嵌開啟，可點「新分頁開啟／下載」。
+- 請不要上傳補考試題、學生個資、內部行政資料、私人 Drive 檔案至公開儲存庫。
+- 日後正式上線需設計管理端發布同步、簽核、版本替換以及下架機制。
+- 若整站累積過大，考慮將大量 PDF / JPG 移至獨立物件儲存空間。
+
+【站內資料結構示例】
+{
+  "id":"pilot-magazine-2026-04",
+  "title":"格致青年｜2026年4月號",
+  "category":"格致青年",
+  "issue":"2026-04",
+  "description":"簡介",
+  "mode":"pdf",
+  "status":"published",
+  "pageCount":4,
+  "coverUrl":"assets/page1.jpg",
+  "pages":["assets/page1.jpg","assets/page2.jpg","assets/page3.jpg","assets/page4.jpg"]
+}
+
+【如何自訂刊物】
+- 只將確定可公開的圖片/PDF 放到 assets/，並在 publications.json 記錄路徑。
+- mode=pdf：pages 陣列放已排序的 JPG；適合 1–30 頁。
+- mode=document：url 放公開 PDF 相對路徑；適合 31 頁以上。
+- mode=link：url 放 HTTPS 外部連結。
+- 沒有封面可以留空 coverUrl，會顯示文字封面；這個測試站不從 Drive 取圖。
+
+【回報驗收】
+請回報：一般 Chrome 能顯示 4 本刊物嗎？能翻閱 4 頁與 30 頁嗎？31 頁 PDF 能開啟嗎？
+正式 V13.3 網址完全不用修改。
